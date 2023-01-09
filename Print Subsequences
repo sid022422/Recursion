@@ -1,0 +1,19 @@
+void printsubs(vector<int>p,vector<int>ans,int i){
+     if(i==p.size()){
+         for(int i=0;i<ans.size();i++)cout<<ans[i];
+         cout<<endl;
+         return;
+     }
+     rec(p,ans,i+1);
+     ans.push_back(p[i]);
+     rec(p,ans,i+1);
+     return ;
+ }
+
+int main()
+{
+    vector<int>p= {  4, 6, 5};
+    vector<int>ans={};
+    printsubs(p,ans,0);
+    return 0;
+}
